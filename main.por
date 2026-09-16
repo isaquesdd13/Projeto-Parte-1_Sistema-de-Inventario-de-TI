@@ -36,6 +36,11 @@ programa
                     escreva("Nome: ", ativos[i], "\n")
                     escreva("Quantidade Atual: ", estoque[i][0], "\n")
                     escreva("Quantidade Minima: ", estoque[i][1], "\n")
+
+                    se (estoque[i][0] < estoque[i][1])
+                    {
+                        escreva("Estoque critico! Necessario abrir chamado de compra.\n")
+                    }
                 }
                 pare
 
