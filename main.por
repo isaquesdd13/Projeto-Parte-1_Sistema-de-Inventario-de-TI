@@ -28,8 +28,16 @@ programa
             escolha (opcao)
             {
                 caso 1:
-                    // Logica do relatorio
-                    pare
+                escreva("\n===== RELATORIO DE ESTOQUE =====\n")
+
+                para (inteiro i = 0; i < 3; i++)
+                {
+                    escreva("\nID: ", i, "\n")
+                    escreva("Nome: ", ativos[i], "\n")
+                    escreva("Quantidade Atual: ", estoque[i][0], "\n")
+                    escreva("Quantidade Minima: ", estoque[i][1], "\n")
+                }
+                pare
 
                 caso 2:
                     // Logica do recebimento
