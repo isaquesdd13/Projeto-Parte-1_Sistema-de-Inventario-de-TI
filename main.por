@@ -51,6 +51,15 @@ programa
                 escreva("\n===== REGISTRAR RECEBIMENTO =====\n")
                 escreva("Digite o ID do equipamento (0 a 2): ")
                 leia(id)
+
+                escreva("Digite a quantidade recebida: ")
+                leia(quantidade)
+
+                estoque[id][0] = estoque[id][0] + quantidade
+
+                escreva("\nRecebimento registrado com sucesso!\n")
+                escreva("Equipamento: ", ativos[id], "\n")
+                escreva("Nova quantidade: ", estoque[id][0], "\n")
                 pare
 
                 caso 3:
