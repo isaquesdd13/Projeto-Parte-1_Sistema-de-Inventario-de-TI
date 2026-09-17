@@ -28,43 +28,50 @@ programa
             escolha (opcao)
             {
                 caso 1:
-                escreva("\n===== RELATORIO DE ESTOQUE =====\n")
+                    escreva("\n===== RELATORIO DE ESTOQUE =====\n")
 
-                para (inteiro i = 0; i < 3; i++)
-                {
-                    escreva("\nID: ", i, "\n")
-                    escreva("Nome: ", ativos[i], "\n")
-                    escreva("Quantidade Atual: ", estoque[i][0], "\n")
-                    escreva("Quantidade Minima: ", estoque[i][1], "\n")
-
-                    se (estoque[i][0] < estoque[i][1])
+                    para (inteiro i = 0; i < 3; i++)
                     {
-                        escreva("Estoque critico! Necessario abrir chamado de compra.\n")
+                        escreva("\nID: ", i, "\n")
+                        escreva("Nome: ", ativos[i], "\n")
+                        escreva("Quantidade Atual: ", estoque[i][0], "\n")
+                        escreva("Quantidade Minima: ", estoque[i][1], "\n")
+
+                        se (estoque[i][0] < estoque[i][1])
+                        {
+                            escreva("Estoque critico! Necessario abrir chamado de compra.\n")
+                        }
                     }
-                }
-                pare
+                    pare
 
                 caso 2:
-                inteiro id
-                inteiro quantidade
+                    inteiro id
+                    inteiro quantidade
 
-                escreva("\n===== REGISTRAR RECEBIMENTO =====\n")
-                escreva("Digite o ID do equipamento (0 a 2): ")
-                leia(id)
+                    escreva("\n===== REGISTRAR RECEBIMENTO =====\n")
+                    escreva("Digite o ID do equipamento (0 a 2): ")
+                    leia(id)
 
-                escreva("Digite a quantidade recebida: ")
-                leia(quantidade)
+                    se (id >= 0 e id <= 2)
+                        {
+                            escreva("Digite a quantidade recebida: ")
+                            leia(quantidade)
 
-                estoque[id][0] = estoque[id][0] + quantidade
+                            estoque[id][0] = estoque[id][0] + quantidade
 
-                escreva("\nRecebimento registrado com sucesso!\n")
-                escreva("Equipamento: ", ativos[id], "\n")
-                escreva("Nova quantidade: ", estoque[id][0], "\n")
-                pare
+                            escreva("\nRecebimento registrado com sucesso!\n")
+                            escreva("Equipamento: ", ativos[id], "\n")
+                            escreva("Nova quantidade: ", estoque[id][0], "\n")
+                        }
+                    senao
+                        {
+                            escreva("\nErro: ID invalido! Digite um ID entre 0 e 2.\n")
+                        }
+                    pare
 
                 caso 3:
                     escreva("\nSistema encerrado!\n")
-                    pare
+                pare
 
                 caso contrario:
                     escreva("\nOpcao invalida!\n")
