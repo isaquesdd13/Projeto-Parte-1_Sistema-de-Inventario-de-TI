@@ -45,8 +45,13 @@ programa
                 pare
 
                 caso 2:
-                    // Logica do recebimento
-                    pare
+                inteiro id
+                inteiro quantidade
+
+                escreva("\n===== REGISTRAR RECEBIMENTO =====\n")
+                escreva("Digite o ID do equipamento (0 a 2): ")
+                leia(id)
+                pare
 
                 caso 3:
                     escreva("\nSistema encerrado!\n")
